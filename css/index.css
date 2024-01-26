@@ -5,16 +5,21 @@
     --Dark-blue-dark-blue-300: #0A3871;
     --Gray-gray-400: #495057;
     --Gray-gray-500: #343A40;
+    --Gray-gray-200: #D8DFE8;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
+textarea::placeholder {
+    color: var(--Dark-blue-dark-blue-300);
+  }
+
 body {  
-    font-family: 'Inter', sans-serif;
     background-color: var(--Light-blue-light-blue-100);
 }
 
@@ -28,7 +33,6 @@ body {
     display: flex;
     flex-direction: row;
     padding: 40px;
-    border: 1px solid blue;
 }
 
 /* parte da entrada de dados */
@@ -37,12 +41,81 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    border: solid 1px red;
 }
 
 .app {
-    border: 1px solid green;
     height: 100%;
+    width: 100%;
+    padding: 40px 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.entrada-input {
+    width: 100%;
+    max-width: 680px;
+    background-color: var(--Light-blue-light-blue-100);
+    border: none;
+    outline: none;
+    font-size: 32px;
+    color: var(--Dark-blue-dark-blue-300);
+}
+
+.entrada-espaco {
+    flex: 1;
+}
+
+.entrada-aviso {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.entrada-txt-aviso {
+    color: var(--Gray-gray-400);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 18px */
+}
+
+.entrada-botoes {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.entrada-botao-criptografar {
+    width: 100%;
+    max-width: 328px;
+    background-color: var(--Dark-blue-dark-blue-300);
+    color: white;
+    border: none;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 16px;
+}
+
+.entrada-botao-descriptografar {
+    width: 100%;
+    max-width: 328px;
+    background-color: var(--Gray-gray-200);
+    color: var(--Dark-blue-dark-blue-300);
+    border: none;
+    padding: 24px;
+    border: 1px solid var(--Dark-blue-dark-blue-300);
+    border-radius: 24px;
+    font-size: 16px;
 }
 
 
@@ -62,7 +135,7 @@ body {
     text-align: center;
 }
 
-.texto-resultado {
+.resultado-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
