@@ -16,6 +16,16 @@ const btnCriptografar = document.getElementById('entrada-botao-criptografar').ad
     }
 });
 
+const btnDescriptografar = document.getElementById('entrada-botao-descriptografar').addEventListener('click', () => {
+    if (textarea.value !== '') {
+        resultadoDefault.style.display = 'none';
+        resultado.style.display = 'flex';
+        resultadoText.innerText = descriptografar(textarea.value);
+    } else {
+        alert('digite um texto primeiro');
+    }
+});
+
 function criptografar(texto) {
     let textoCriptografado = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
     return textoCriptografado;
