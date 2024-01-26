@@ -13,23 +13,23 @@
                 <img src="./assets/Logo.svg" alt="Logo" class="app-logo">
             </div>
             <div class="app">
-                <textarea name="entrada-textarea" class="entrada-textarea" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
+                <textarea name="entrada-textarea" class="entrada-textarea" id="entrada-textarea" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
                 <div class="entrada-espaco"></div>
                 <span class="entrada-aviso">
                     <img src="./assets/bi_exclamation-circle-fill.svg" alt="Aviso">
                     <p class="entrada-txt-aviso">Apenas letras minúsculas e sem acento.</p>
                 </span>
                 <div class="entrada-botoes">
-                    <button class="entrada-botao-criptografar">Criptografar</button>
+                    <button class="entrada-botao-criptografar" id="entrada-botao-criptografar">Criptografar</button>
                     <button class="entrada-botao-descriptografar">Descriptografar</button>
                 </div>
             </div>
         </div>
-        <div class="resultado">
-            <p class="resultado-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit hic ex, distinctio aliquam similique dolore inventore. Provident reprehenderit error ut, distinctio nihil, veritatis iste, inventore quibusdam repellendus doloribus sapiente quisquam!</p>
+        <div class="resultado" id="resultado">
+            <p class="resultado-texto" id="resultado-texto"></p>
             <button class="resultado-botao-copiar">Copiar</button>
         </div>
-        <div class="resultado-default">
+        <div class="resultado-default" id="resultado-default">
             <img src="./assets/High quality products 1 1.svg" alt="Pessoa tentando encontrar um resultado" class="resultado-default-img">
             <div class="resultado-default-texto">
                 <h3>Nenhuma mensagem encontrada.</h3>
@@ -37,5 +37,6 @@
             </div>
         </div>
     </main>
+    <script src="./js/index.js"></script>
 </body>
 </html>
