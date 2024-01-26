@@ -177,3 +177,36 @@ body {
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
+
+
+/* responsividade */
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .app {
+        flex: 1;
+        padding: 0;
+        margin: 40px 0px 40px 0px;
+    }
+
+    .app-logo {
+        content: url('../assets/Top.svg');
+    }
+
+    .resultado {
+        display: none;
+        width: 100%;
+    }
+
+    .resultado-default {
+        display: flex;
+        width: 100%;
+    }
+
+    .resultado-default-img {
+        display: none;
+    }
+  }
