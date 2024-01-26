@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --Light-blue-light-blue-100: #F3F5FC;
+    --Dark-blue-dark-blue-300: #0A3871;
+    --Gray-gray-400: #495057;
+    --Gray-gray-500: #343A40;
+}
+
+.body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
