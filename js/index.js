@@ -26,15 +26,26 @@ const btnDescriptografar = document.getElementById('entrada-botao-descriptografa
     }
 });
 
-function criptografar(texto) {
-    let textoCriptografado = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+function criptografar(textoCriptografar) {
+    let textoCriptografado = textoCriptografar.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
     return textoCriptografado;
 }
 
 
-function descriptografar(texto) {
-    let textoCriptografado = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
-    return textoCriptografado;
+function descriptografar(textoDescriptografar) {
+    let textoDescriptografado = textoDescriptografar.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+    return textoDescriptografado;
+}
+
+let textoCopiado = document.getElementById('resultado-texto');
+
+const copiarConteudo = async () => {
+    try {
+        await navigator.clipboard.writeText(textoCopiado.innerHTML);
+        console.log('Texto copiado para a área de transferência');
+    } catch (erro) {
+        console.error('Falha ao copiar: ', erro);
+    }
 }
 
 
