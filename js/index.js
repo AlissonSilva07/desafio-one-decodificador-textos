@@ -1,11 +1,11 @@
 
-
+// Seleciona elementos da DOM
 let textarea = document.getElementById('entrada-textarea');
 let resultado = document.getElementById('resultado');
 let resultadoDefault = document.getElementById('resultado-default');
 let resultadoText = document.getElementById('resultado-texto');
 
-
+// Botão de criptografar mensagem e lógica
 const btnCriptografar = document.getElementById('entrada-botao-criptografar').addEventListener('click', () => {
     if (textarea.value !== '') {
         resultadoDefault.style.display = 'none';
@@ -16,6 +16,7 @@ const btnCriptografar = document.getElementById('entrada-botao-criptografar').ad
     }
 });
 
+// Botão de descriptografar mensagem e lógica
 const btnDescriptografar = document.getElementById('entrada-botao-descriptografar').addEventListener('click', () => {
     if (textarea.value !== '') {
         resultadoDefault.style.display = 'none';
@@ -26,19 +27,22 @@ const btnDescriptografar = document.getElementById('entrada-botao-descriptografa
     }
 });
 
+// Função auxiliar para criptografar a mensagem
 function criptografar(textoCriptografar) {
     let textoCriptografado = textoCriptografar.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
     return textoCriptografado;
 }
 
-
+// Função auxiliar para descriptografar a mensagem
 function descriptografar(textoDescriptografar) {
     let textoDescriptografado = textoDescriptografar.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
     return textoDescriptografado;
 }
 
+//Seletor de conteúdo copiável
 let textoCopiado = document.getElementById('resultado-texto');
 
+// Função assíncrona que copia o texto para clipboard
 const copiarConteudo = async () => {
     try {
         await navigator.clipboard.writeText(textoCopiado.innerHTML);
