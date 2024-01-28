@@ -46,7 +46,7 @@ body {
 .app {
     height: 100%;
     width: 100%;
-    padding: 28px 240px;
+    padding: 28px 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,6 +107,15 @@ body {
     font-size: 16px;
 }
 
+.entrada-botao-criptografar:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.entrada-botao-criptografar:active {
+    filter: brightness(70%);
+}
+
 .entrada-botao-descriptografar {
     width: 100%;
     max-width: 328px;
@@ -119,12 +128,21 @@ body {
     font-size: 16px;
 }
 
+.entrada-botao-descriptografar:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.entrada-botao-descriptografar:active {
+    filter: brightness(70%);
+}
+
 
 /* parte da saída de dados */
 .resultado {
     display: none;
 
-    width: 400px;
+    width: 28%;
     height: 100%;
     background-color: white;
     padding: 32px;
@@ -155,6 +173,15 @@ body {
     font-size: 16px;
 }
 
+.resultado-botao-copiar:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.resultado-botao-copiar:active {
+    filter: brightness(70%);
+}
+
 
 .resultado-default-texto {
     display: flex;
@@ -167,7 +194,7 @@ body {
 .resultado-default {
     display: flex;
 
-    width: 400px;
+    width: 28%;
     height: 100%;
     background-color: white;
     padding: 32px;
@@ -180,8 +207,37 @@ body {
     text-align: center;
 }
 
+.resultado-default-img {
+    object-fit: contain;
+}
+
 
 /* responsividade */
+@media screen and (max-width: 1400px) {
+    .app {
+        padding: 32px 120px;
+    }
+
+    .entrada-textarea {
+        font-size: 26px;
+    }
+
+    .resultado-texto {
+        font-size: 20px;
+    }
+
+    .resultado-default-img {
+        width: 90%;
+    }
+}
+
+/* responsividade */
+@media screen and (max-width: 1024px) {
+    .app {
+        padding: 32px 80px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .container {
@@ -272,5 +328,13 @@ body {
         padding: 0;
         font-size: 16px;
         text-decoration: underline;
+    }
+    
+    .resultado-botao-copiar:active {
+        width: auto;
+        padding: 0px 8px;
+        border-radius: 24px;
+        background: var(--Gray-gray-200);
+        filter: brightness(70%);
     }
 }
