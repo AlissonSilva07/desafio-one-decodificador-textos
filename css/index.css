@@ -329,4 +329,12 @@ body {
         font-size: 16px;
         text-decoration: underline;
     }
+    
+    .resultado-botao-copiar:active {
+        width: auto;
+        padding: 0px 8px;
+        border-radius: 24px;
+        background: var(--Gray-gray-200);
+        filter: brightness(70%);
+    }
 }
